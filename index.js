@@ -12,12 +12,13 @@ var app = express();
     app.set('view engine', 'ejs')
     app.set('port', process.env.PORT || 5000)
 
-    db.sequelize.sync().then(function() {
-        http.createServer(app).listen(app.get('port'), function(){
-          console.log('Express server listening on port ' + app.get('port'));
-        });
-      });
+    app.listen(app.get('port'))
+    app.get("/", function(request, response){
+      response.render("pages/index.ejs")
+    })
 
-    
-
-    
+    // db.sequelize.sync().then(function() {
+    //     http.createServer(app).listen(app.get('port'), function(){
+    //       console.log('Express server listening on port ' + app.get('port'));
+    //     });
+    //   });
