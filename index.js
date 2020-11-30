@@ -12,6 +12,10 @@ var app = express();
     app.set('view engine', 'ejs')
     app.set('port', process.env.PORT || 5000)
 
+    app.use(express.urlencoded({extended: true}))
+    app.use(express.json())
+    app.use(express.static(__dirname + '/public'))
+
     app.listen(app.get('port'))
     app.get("/", function(request, response){
       response.render("pages/index.ejs")
