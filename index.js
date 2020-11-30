@@ -21,6 +21,22 @@ var app = express();
       response.render("pages/index.ejs")
     })
 
+    app.get("/service", function(request, response){
+      response.render("pages/servicios.ejs")
+    })
+
+    app.get("/nosotros", function(request, response){
+      response.render("pages/nosotros.ejs")
+    })
+
+    app.get("/contactanos", function(request, response){
+      response.render("pages/contactanos.ejs")
+    })
+
+    app.get("/portafolio", function(request, response){
+      response.render("pages/portafolio.ejs")
+    })
+
     // db.sequelize.sync().then(function() {
     //     http.createServer(app).listen(app.get('port'), function(){
     //       console.log('Express server listening on port ' + app.get('port'));

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
+<body id="body-principal">
     <!----------------------------------NavBar----------------------------------->
     <section id="nav-bar">
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -23,19 +23,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Home</a>
+                  <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Portafolio</a>
+                  <a class="nav-link" href="/portafolio">Portafolio</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Servicios</a>
+                  <a class="nav-link" href="/service">Servicios</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Sobre Nosotros</a>
+                  <a class="nav-link" href="/nosotros">Sobre Nosotros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contactanos</a>
+                    <a class="nav-link" href="/contactanos">Contactanos</a>
                   </li>
               </ul>
             </div>
@@ -56,21 +56,33 @@
           </div>
         </div>
       </header>
-      
-      <section class="my-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8 mx-auto">
-              <p>The HTML5 video element uses an mp4 video as a source. Change the source video to add in your own background! The header text is vertically centered using flex utilities that are build into Bootstrap 4.</p>
-              <p>The overlay color can be changed by changing the <code>background-color</code> of the <code>.overlay</code> class in the CSS.</p>
-              <p>Set the mobile fallback image in the CSS by changing the background image of the header element within the media query at the bottom of the CSS snippet.</p>
-              <p class="mb-0">
-                Created by <a href="https://startbootstrap.com">Start Bootstrap</a>
-              </p>
-            </div>
+
+      <!---------------------Dos Mundos------------------------>
+      <section id="dosMundos">
+          <h1 class="tituloDosMundos">
+              DOS MUNDOS
+          </h1>
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-6 mundo fondomundo">
+                      <h1 class="tituloVR">VR</h1>
+                      <h4>Realidad Virtual</h4>
+                  </div>
+                  <div class="col-md-6 mundo fondomundo">
+                    <h1 class="tituloAR">AR</h1>
+                    <h4>Realidad Aumentada</h4>
+                </div>
+              </div>
           </div>
-        </div>
       </section>
+
+      <!---------------------Soluciones------------------------>
+      <section id="soluciones">
+          <h1>Soluciones</h1>
+          <h2>Para cada Problema</h2>
+      </section>
+
+
 
 </body>
 

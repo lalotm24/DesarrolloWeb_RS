@@ -52,6 +52,10 @@ body{
 }
 
 /* ------------------------------Videobanner------------------------- */
+#body-principal
+{
+  background-color: black;
+}
 
 header {
     position: relative;
@@ -100,4 +104,184 @@ header {
     header video {
       display: none;
     }
+  }
+
+
+
+/* --------------------------Dos Mundos-------------------*/
+.tituloDosMundos
+{
+    text-align: center;
+    font-size: 100px;
+    font-weight: 600;
+    color: white;
+}
+
+.mundo
+{
+    text-align: center;
+}
+
+.fondomundo
+{
+    background-color: gray;
+    color: white;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fondomundo h1
+{
+    font-size: 100px;
+}
+
+.tituloAR::before
+{
+    content: '';
+    background-color: #090d90;
+    height: 10px;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transform: translateY(120px);
+}
+
+.tituloVR::before
+{
+    content: '';
+    background-color: #ca2e16;
+    height: 10px;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transform: translateY(120px);
+}
+
+
+/* --------------------Soluciones para cada problema---------------- */
+
+#soluciones h1
+{
+    text-align: center;
+    font-size: 100px;
+    font-weight: 600;
+    color: white;
+}
+
+#soluciones h2
+{
+    text-align: center;
+    font-size: 75px;
+    font-weight: 75;
+    color: white;
+}
+
+
+
+/*-----------------Servicios--------------------------------------------*/
+#tituloServiciosPagina
+{
+    text-align: center;
+    font-size: 100px;
+    font-weight: 600;
+    
+    
+}
+
+#Servicios h1
+{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 300;
+}
+.container-servicios {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Bottom left text */
+  .bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+  }
+  
+  /* Top left text */
+  .top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+  
+  /* Top right text */
+  .top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+  }
+  
+  /* Bottom right text */
+  .bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+  }
+  
+  /* Centered text */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+/*--------------Contactanos------------------*/
+/* Style inputs with type="text", select elements and textareas */
+#forum-contacto
+{
+  background-color: black;
+}
+.contactanos
+{
+  padding: 50px;
+}
+
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #CA2E16;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #090D90;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container-contactanos {
+    border-radius: 5px;
+    background-color: black;
+    padding: 20px;
   }
