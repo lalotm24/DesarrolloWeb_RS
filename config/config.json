@@ -1,21 +1,21 @@
 {
   "development": {
-    "username": "development",
-    "password": "dev",
-    "database": "database_development",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "Lalo",
+    "password": null,
+    "database": "reflectivestudio_db",
+    "host": "localhost",
+    "dialect": "postgres"
   },
   "test": {
-    "username": "test",
-    "password": "test",
+    "username": "root",
+    "password": null,
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "production",
-    "password": "prod",
+    "username": "root",
+    "password": null,
     "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "mysql"

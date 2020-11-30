@@ -1,6 +1,7 @@
 'use strict';
 
 const fs = require('fs');
+const { userInfo } = require('os');
 const path = require('path');
 const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
@@ -31,7 +32,10 @@ Object.keys(db).forEach(modelName => {
   }
 });
 
-db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+db.sequelize = sequelize;
+db.Users = require(path.join(__dirname, '/users.js'))(sequelize, Sequelize.DataTypes)
+
+
 
 module.exports = db;
