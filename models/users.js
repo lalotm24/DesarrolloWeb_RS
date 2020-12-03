@@ -23,3 +23,5 @@ module.exports = (sequelize, DataTypes) => {
   });
   return Users;
 };
+
+const retrieveAllUsers = 'SELECT * FROM "Users"';

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -19,13 +19,24 @@
   },
   "homepage": "https://github.com/lalotm24/DesarrolloWeb_RS#readme",
   "dependencies": {
+    "JSON": "^1.0.0",
     "Promise": "^1.0.5",
+    "bcryptjs": "^2.4.3",
+    "bootstrap": "^4.5.3",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
+    "express-session": "^1.17.1",
     "mysql2": "^2.2.5",
+    "nodemon": "^2.0.6",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "pg": "^8.5.1",
     "pg-hstore": "^2.3.3",
+    "request": "^2.88.2",
     "sequelize": "^6.3.5",
     "sequelize-cli": "^6.2.0"
   }
