@@ -9,7 +9,8 @@ body{
 
 #bodyOtros{
 background-image:  linear-gradient(to bottom, rgba(0, 0, 0, 1),rgba(0, 0, 0,1),rgba(0, 0, 0,1),rgba(0, 0, 0, 1),rgba(0, 0, 0, 1),rgba(0, 0, 0, 1),rgba(0, 0, 0, 1),rgba(0, 0, 0,.9),rgba(0, 0, 0, .5),rgba(0, 0, 0, .2),rgba(0, 0, 0, 0));
-
+margin: 0;
+padding: 0;
 }
 
 /*  ---------------------------------NavBar-----------------------*/
@@ -37,11 +38,6 @@ background-image:  linear-gradient(to bottom, rgba(0, 0, 0, 1),rgba(0, 0, 0,1),r
 {
     padding: 0 10px
 }
-
-.dropdown-menu a{
-  color: black;
-}
-
 .navbar-nav li a
 {
     color: #fff !important;
@@ -61,8 +57,7 @@ background-image:  linear-gradient(to bottom, rgba(0, 0, 0, 1),rgba(0, 0, 0,1),r
     outline: none !important;
 }
 
-
-
+.dropdown-menu a:hover {background-color: transparent;}
 /* ------------------------------Videobanner------------------------- */
 #body-principal
 {
@@ -365,8 +360,8 @@ header #bkgServicos{
   margin-left: 18%;
 }
 header #bkgCon{
-  background-image:  linear-gradient(to bottom, rgba(0, 0, 0, 1),rgba(0, 0, 0,1),rgba(0, 0, 0, .5),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(0, 0, 0, .3),rgba(0, 0, 0,.9),rgba(0, 0, 0, 1),rgba(0, 0, 0, 1),rgba(0, 0, 0, 1)),
-  url('assets/equipo.jpg');
+  background-image:  linear-gradient(to right, rgba(0, 0, 0, 0),rgba(0, 0, 0,0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(0, 0, 0, .3),rgba(0, 0, 0, .6),rgba(0, 0, 0,.9),rgba(0, 0, 0, 1),rgba(0, 0, 0, 1),rgba(0, 0, 0, 1)),
+    url('assets/equipo.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -483,7 +478,7 @@ body {
   position: relative;
   height: 100%;
   /* aquiiiiiiiiiiiiiii----------------------------------*/
-  background-image:  linear-gradient(to bottom, rgba(0, 0, 0, 0),rgba(0, 0, 0,0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(255, 255, 255, 0),rgba(255, 255, 255, .2),rgba(255, 255, 255,.5),rgba(255, 255, 255, .8),rgba(255, 255, 255, 1),rgba(255, 255, 255, 1)),
+  background-image:  linear-gradient(to bottom, rgba(0, 0, 0, 0),rgba(0, 0, 0,0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(0, 0, 0, .2),rgba(0, 0, 0,.5),rgba(0, 0, 0, .8),rgba(0, 0, 0, 1),rgba(0, 0, 0, 1)),
   url('/assets/neonbrand-mlZzMow-CQw-unsplash.jpg');
 }
 #dosAnim{
@@ -491,7 +486,7 @@ body {
   position: relative;
   height: 100%;
   /* aquiiiiiiiiiiiiiii----------------------------------*/
-  background-image:  linear-gradient(to bottom, rgba(0, 0, 0, 0),rgba(0, 0, 0,0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(255, 255, 255, 0),rgba(255, 255, 255, .2),rgba(255, 255, 255,.5),rgba(255, 255, 255, .8),rgba(255, 255, 255, 1),rgba(255, 255, 255, 1)),
+  background-image:  linear-gradient(to bottom, rgba(0, 0, 0, 0),rgba(0, 0, 0,0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(0, 0, 0, .2),rgba(0, 0, 0,.5),rgba(0, 0, 0, .8),rgba(0, 0, 0, 1),rgba(0, 0, 0, 1)),
   url('/assets/neonbrand-mlZzMow-CQw-unsplash.jpg');
 }
  #tresAnim{
@@ -499,7 +494,7 @@ body {
   position: relative;
   height: 100%;
   /* aquiiiiiiiiiiiiiii----------------------------------*/
-  background-image:  linear-gradient(to bottom, rgba(0, 0, 0, 0),rgba(0, 0, 0,0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(255, 255, 255, 0),rgba(255, 255, 255, .2),rgba(255, 255, 255,.5),rgba(255, 255, 255, .8),rgba(255, 255, 255, 1),rgba(255, 255, 255, 1)),
+  background-image:  linear-gradient(to bottom, rgba(0, 0, 0, 0),rgba(0, 0, 0,0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(0, 0, 0, .2),rgba(0, 0, 0,.5),rgba(0, 0, 0, .8),rgba(0, 0, 0, 1),rgba(0, 0, 0, 1)),
   url('/assets/neonbrand-mlZzMow-CQw-unsplash.jpg');
 }
  #cuatroAnim{
@@ -507,7 +502,7 @@ body {
   position: relative;
   height: 100%;
   /* aquiiiiiiiiiiiiiii----------------------------------*/
-  background-image:  linear-gradient(to bottom, rgba(0, 0, 0, 0),rgba(0, 0, 0,0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(255, 255, 255, 0),rgba(255, 255, 255, .2),rgba(255, 255, 255,.5),rgba(255, 255, 255, .8),rgba(255, 255, 255, 1),rgba(255, 255, 255, 1)),
+  background-image:  linear-gradient(to bottom, rgba(0, 0, 0, 0),rgba(0, 0, 0,0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(0, 0, 0, .2),rgba(0, 0, 0,.5),rgba(0, 0, 0, .8),rgba(0, 0, 0, 1),rgba(0, 0, 0, 1)),
   url('/assets/neonbrand-mlZzMow-CQw-unsplash.jpg');
 }
 #cincoAnim{
@@ -515,7 +510,7 @@ body {
   position: relative;
   height: 100%;
   /* aquiiiiiiiiiiiiiii----------------------------------*/
-  background-image:  linear-gradient(to bottom, rgba(0, 0, 0, 0),rgba(0, 0, 0,0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(255, 255, 255, 0),rgba(255, 255, 255, .2),rgba(255, 255, 255,.5),rgba(255, 255, 255, .8),rgba(255, 255, 255, 1),rgba(255, 255, 255, 1)),
+  background-image:  linear-gradient(to bottom, rgba(0, 0, 0, 0),rgba(0, 0, 0,0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(0, 0, 0, .2),rgba(0, 0, 0,.5),rgba(0, 0, 0, .8),rgba(0, 0, 0, 1),rgba(0, 0, 0, 1)),
   url('/assets/neonbrand-mlZzMow-CQw-unsplash.jpg');
 }
 .el__inner {
@@ -708,7 +703,7 @@ body {
   height: 100%;
   min-height: 250px;
   text-align: left;
-  font-size: 2.8vw;
+  font-size: 2.4vw;
   line-height: 0.85;
   font-weight: bold;
   -webkit-transition: opacity 0.3s 1.4s, -webkit-transform 0.5s;
@@ -736,7 +731,7 @@ body {
   width: 20PX;
 }
 .el__index-back {
-  color: #000000;
+  color: #ffffff;
   opacity: 0;
   -webkit-transition: opacity 0.25s 0.25s;
   transition: opacity 0.25s 0.25s;

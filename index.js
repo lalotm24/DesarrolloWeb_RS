@@ -32,15 +32,15 @@ var app = express();
     app.use(bodyParser.json());
     app.use(express.static(__dirname + '/Public'))
     
-    
+    app.listen(app.get('port'))
 
     
     //Creacion del servidor
-    db.sequelize.sync().then(function() {
-      http.createServer(app).listen(app.get('port'), function(){
-        console.log('Express server listening on port ' + app.get('port'));
-      });
-    });
+    // db.sequelize.sync().then(function() {
+    //   http.createServer(app).listen(app.get('port'), function(){
+    //     console.log('Express server listening on port ' + app.get('port'));
+    //   });
+    // });
 
     //Conceccion a la base de datos
     const client = new Client({
