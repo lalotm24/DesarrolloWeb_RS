@@ -10,6 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
 </head>
 
 <body id = "bodyOtros">
@@ -37,6 +38,15 @@
               <li class="nav-item">
                   <a class="nav-link" href="/contactanos">Contactanos</a>
                 </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style = "background-color: black">
+                      <%-include(content) %>
+                      <!-- <a class="dropdown-item" href="/login">Iniciar sesion</a>
+                      <a class="dropdown-item" href="/logout">Cerrar sesion</a> -->
+                  </div>
+                </li> 
             </ul>
           </div>
         </nav>
@@ -63,37 +73,64 @@
   </h2>
 
 <section >
-  <div class="card-columns" >
-    <div class="card" style= "border-radius: 0%;">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title that wraps to a new line</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+  <div class="container-fluid mt-4">
+    <div class="row justify-content-center">
+      <div class="col-auto mb-3">
+        <div class="card h-100" style= "border-radius: 0%; width: 30rem;">
+          <img src="/assets/casa2.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Recorrido virtual con modelos 3D</h5>
+            <p class="card-text">Se modela el espacio deseado en modelos 3D para permitir al usuario explorarlo usando
+              visores de realidad virtual. Este tipo de proyectos es excelente para mostrar proyectos 
+              que todavía no se terminan o empiezan y están en la fase de planeación.
+              Precio: bajo cotización.</p>
+            <a href="#" class="btn btn-primary" style="border-radius: 0%; background-color: black;border-color: black;">Contactanos</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-auto mb-3">
+        <div class="card h-100" style= "border-radius: 0%; width: 30rem;">
+          <img src="/assets/tour3602.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Recorrido virtual con fotos</h5>
+            <p class="card-text">Mediante el uso de fotos 360 del espacio que se desea explorar se crea un recorrido que 	el usuario puede explorar mediante el uso de realidad virtual o un navegador de internet.</p>
+            <a href="#" class="btn btn-primary" style="border-radius: 0%; background-color: black;border-color: black;">Contactanos</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-auto mb-3">
+        <div class="card h-100" style= "border-radius: 0%; width: 30rem;">
+          <img src="/assets/hamburguesa.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Proyecto Personalizado</h5>
+            <p class="card-text">Proyecto acorde a las necesidades del cliente, se discute en una junta lo que se puede hacer.</p>
+            <a href="#" class="btn btn-primary" style="border-radius: 0%; background-color: black;border-color: black;">Contactanos</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-auto mb-3">
+        <div class="card h-100" style= "border-radius: 0%; width: 30rem;">
+          <img src="/assets/consultoria.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Servicio de consultoría</h5>
+            <p class="card-text">El servicio de consultoría se realiza cuando el cliente no tiene una idea clara del proyecto que quiere realizar. Analizamos sus necesidades y metas para proponer un proyecto que cumpla con sus expectativas.</p>
+            <a href="#" class="btn btn-primary" style="border-radius: 0%; background-color: black;border-color: black;">Contactanos</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-auto mb-3">
+        <div class="card h-100" style= "border-radius: 0%; width: 30rem;">
+          <img src="/assets/VR.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Activaciones</h5>
+            <p class="card-text">Se crea una experiencia virtual que se ajuste a lo que el cliente quiere transmitir a su mercado.
+              Este tipo de proyecto es excelente como una estrategia de marketing en eventos.
+              </p>
+            <a href="#" class="btn btn-primary" style="border-radius: 0%; background-color: black;border-color: black;">Contactanos</a>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="card" style= "border-radius: 0%;">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title that wraps to a new line</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-    <div class="card"style= "border-radius: 0%;">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title that wraps to a new line</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-    <div class="card"style= "border-radius: 0%;">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title that wraps to a new line</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-    
- 
   </div>
 </section>
 
@@ -102,56 +139,104 @@
 </h2>
 
 
-<section>
-  <div class="card-columns" >
-    <div class="card" style= "border-radius: 0%;">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title that wraps to a new line</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+<section >
+  <div class="container-fluid mt-4">
+    <div class="row justify-content-center">
+      <div class="col-auto mb-3">
+        <div class="card h-100" style= "border-radius: 0%; width: 30rem;">
+          <img src="/assets/filtrobasico.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Filtro básico</h5>
+            <p class="card-text">Interacción básica con imágenes.</p>
+            <a href="#" class="btn btn-primary" style="border-radius: 0%; background-color: black;border-color: black;">Contactanos</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-auto mb-3">
+        <div class="card h-100" style= "border-radius: 0%; width: 30rem;">
+          <img src="/assets/filtro3d.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Filtros con interacción 3D con etiquetas o logos</h5>
+            <p class="card-text">Filtro que contiene elementos modelados y que puede fijarse a un objeto dándole un
+              efecto realista dando una escala del producto a los usuarios.</p>
+            <a href="#" class="btn btn-primary" style="border-radius: 0%; background-color: black;border-color: black;">Contactanos</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-auto mb-3">
+        <div class="card h-100" style= "border-radius: 0%; width: 30rem;">
+          <img src="/assets/tarjeta.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Tarjetas de presentación con realidad aumentada</h5>
+            <p class="card-text">Se diseña una tarjeta con realidad aumentada para que el cliente pueda mostrar sus servicios y productos de una forma innovadora.</p>
+            <a href="#" class="btn btn-primary" style="border-radius: 0%; background-color: black;border-color: black;">Contactanos</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-auto mb-3">
+        <div class="card h-100" style= "border-radius: 0%; width: 30rem;">
+          <img src="/assets/producto.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Visualización de producto</h5>
+            <p class="card-text">Por medio de realidad virtual y aumentada permite a una empresa o negocio mostrar sus productos a sus clientes o usuarios, estableciendo una interacción directa y permitiendo tener sus productos en escala real para compartir a sus usuarios.</p>
+            <a href="#" class="btn btn-primary" style="border-radius: 0%; background-color: black;border-color: black;">Contactanos</a>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="card" style= "border-radius: 0%;">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title that wraps to a new line</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-    <div class="card"style= "border-radius: 0%;">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title that wraps to a new line</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-    <div class="card" style= "border-radius: 0%;">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title that wraps to a new line</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-    
   </div>
-
 </section>
 
 
 </body>
 
-<footer>
-  <div class="content">
-  <div class="logo"></div>
-  <nav>
-    <ul >
-      <li></li>
-      <li></li>
-      <li></li>
-     
-      <li></li>
-    </ul>
-  </nav>
+<!-- Footer -->
+<footer class="page-footer font-small teal pt-4">
+
+  <!-- Footer Text -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase font-weight-bold">Footer text 1</h5>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita sapiente sint, nulla, nihil
+          repudiandae commodi voluptatibus corrupti animi sequi aliquid magnam debitis, maxime quam recusandae
+          harum esse fugiat. Itaque, culpa?</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mb-md-0 mb-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase font-weight-bold">Footer text 2</h5>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio deserunt fuga perferendis modi earum
+          commodi aperiam temporibus quod nulla nesciunt aliquid debitis ullam omnis quos ipsam, aspernatur id
+          excepturi hic.</p>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
   </div>
+  <!-- Footer Text -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
 </footer>
+<!-- Footer -->
 </html>

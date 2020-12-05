@@ -21,7 +21,9 @@ var app = express();
     app.set('port', process.env.PORT || 5000)
     app.use(require('cookie-parser')());
     app.use(session({  
-      secret: 'woot'
+      secret: 'woot',
+      resave: false,
+      saveUninitialized: true,
       }));
       const LocalStrategy = require('passport-local').Strategy;
     app.use(passport.initialize());
@@ -92,24 +94,64 @@ var app = express();
     })
     
     //Pagina principal
-    app.get('/', (req, res) => {
-      res.render('pages/index.ejs', {title: "Home", userData: req.user, messages: {
-        danger: req.flash('danger'), warning: req.flash('warning'), success: req.flash('success')
-      }})
-    })
+    app.get('/', async (req, res, next) => {
+      if(req.isAuthenticated()){
+        res.render('pages/index.ejs', {content: 'cerrarSesion', title: "Home", userData: req.user, messages: {
+          danger: req.flash('danger'), warning: req.flash('warning'), success: req.flash('success')
+        }});
+      }else{
+        res.render('pages/index.ejs', {content: 'iniciarSesion', title: "Home", userData: req.user, messages: {
+          danger: req.flash('danger'), warning: req.flash('warning'), success: req.flash('success')
+      }
+  });
+}
+});
+
+    
+    
+
+      
+    
 
     
 
     app.get('/nosotros', (req, res) =>{
-      res.render('pages/nosotros.ejs');
+      if(req.isAuthenticated()){
+        res.render('pages/nosotros.ejs', {content: 'cerrarSesion', title: "nostros", userData: req.user, messages: {
+          danger: req.flash('danger'), warning: req.flash('warning'), success: req.flash('success')
+        }});
+      }else{
+        res.render('pages/nosotros.ejs', {content: 'iniciarSesion', title: "nostros", userData: req.user, messages: {
+          danger: req.flash('danger'), warning: req.flash('warning'), success: req.flash('success')
+          }
+        });
+      }
     })
 
     app.get('/portafolio', (req, res) =>{
-      res.render('pages/portafolio.ejs');
+      if(req.isAuthenticated()){
+        res.render('pages/portafolio.ejs', {content: 'cerrarSesion', title: "portafolio", userData: req.user, messages: {
+          danger: req.flash('danger'), warning: req.flash('warning'), success: req.flash('success')
+        }});
+      }else{
+        res.render('pages/portafolio.ejs', {content: 'iniciarSesion', title: "portafolio", userData: req.user, messages: {
+          danger: req.flash('danger'), warning: req.flash('warning'), success: req.flash('success')
+          }
+        });
+      }
     })
 
     app.get('/servicios', (req, res) =>{
-      res.render('pages/servicios.ejs');
+      if(req.isAuthenticated()){
+        res.render('pages/servicios.ejs', {content: 'cerrarSesion', title: "servicios", userData: req.user, messages: {
+          danger: req.flash('danger'), warning: req.flash('warning'), success: req.flash('success')
+        }});
+      }else{
+        res.render('pages/servicios.ejs', {content: 'iniciarSesion', title: "servicios", userData: req.user, messages: {
+          danger: req.flash('danger'), warning: req.flash('warning'), success: req.flash('success')
+          }
+        });
+      }
     })
 
     
@@ -134,6 +176,7 @@ var app = express();
       console.log(bcrypt.hash(req.body.password, 5));
       console.log(this.saltSecret)
       console.log(pwd);
+      console.log(req.body.lastName)
       await JSON.stringify(client.query(`SELECT id FROM "Users" WHERE "email"=$1`, [req.body.email], (err, result) => {
         
         if(result.rows[0]){
@@ -147,7 +190,7 @@ var app = express();
               client.query('COMMIT')
               console.log(result)
               req.flash('success','Usuario creado.')
-              res.redirect('index.ejs');
+              res.redirect('/');
               return;
             }
             
@@ -160,38 +203,6 @@ var app = express();
 catch(e){throw(e)}
 });
 
-
-app.get('/contactanos', (req, res, next) => {
-
-  if(req.isAuthenticated()){
-    res.render('pages/contactanos.ejs', {title: "Cuenta", userData: req.user, userData: req.user, messages:{
-      danger: req.flash('danger'), warning: req.flash('warning'), succes: req.flash('success')
-    }})
-  }else{
-    res.redirect('/login')
-  }
-
-})
-
-app.post('/contactanos', async (req, res, next) => {
-
-  await JSON.stringify(`SELECT id FROM "Users" WHERE email=$1`, [req.user.username], (err, res) => {
-    if(res.rows[0]){
-      client.query(`INSERT INTO ordenes (user_id, tipodeorden, comentarios, fecha) VALUES ($1, $2, $3, NOW())`, 
-                    [res.rows[0][email], req.body.seleccionServicio, req.body.Text1], (er, re) =>{
-                      if(err){console.log(err);
-                      }else{
-                        client.query('COMMIT')
-                        console.log(result)
-                        req.flash('success','Orden creada.')
-                        res.redirect('./servicios');
-                        return;
-                      }
-                    })
-    }
-  })
-
-})
 
 app.post('/login', passport.authenticate('local', {
   successRedirect: '/',
@@ -218,6 +229,11 @@ app.get('/login', (req, res, next) =>{
 
 
 
+app.get('/logout', (req, res) =>{
+  req.session.destroy((err) =>{
+    res.redirect('/')
+  })
+})
 
 
 passport.use('/logout', (req, res) => {
@@ -227,6 +243,51 @@ passport.use('/logout', (req, res) => {
   req.flash('success', "Logged out");
   res.redirect('/');
 })
+
+app.post('/contactanos', async (req, res, next) => {
+
+  console.log("hola")
+  var userEmail = JSON.stringify(req.user);
+  var obj = JSON.parse(userEmail);
+
+  await JSON.stringify(client.query(`SELECT id FROM "Users" WHERE email=$1`, [obj[0]["email"]], (err, res) => {
+    if(res.rows[0]){
+      console.log(res.rows[0]["id"]);
+      client.query(`INSERT INTO ordenes (user_id, tipodeorden, comentarios, fecha) VALUES ($1, $2, $3, NOW())`, 
+        [res.rows[0]["id"], req.body.seleccionServicio, req.body.Text1], (er, re) =>{
+          if(er){
+            console.log(er);
+            res,redirect()
+          }else{
+            client.query('COMMIT')
+            console.log(re)
+            req.flash('success','Orden creada.')
+            return;
+          }
+        })
+    }
+  })
+  )
+  res.redirect('/servicios');
+})
+
+app.get('/contactanos', (req, res, next) => {
+
+  if(req.isAuthenticated()){
+    console.log(req.user.email);
+    console.log("sesion iniciada")
+    res.render('pages/contactanos.ejs', {content: 'cerrarSesion', title: "Cuenta", userData: req.user, userData: req.user, messages:{
+      danger: req.flash('danger'), warning: req.flash('warning'), succes: req.flash('success')
+    }})
+  }else{
+    console.log("sesion no iniciada")
+    res.redirect('/login')
+  }
+
+})
+
+
+
 
 
 

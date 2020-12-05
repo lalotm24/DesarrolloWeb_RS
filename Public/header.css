@@ -1,0 +1,52 @@
+/*  ---------------------------------NavBar-----------------------*/
+#nav-bar
+{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar
+{
+    background-color: #000000; 
+    /* background-color: white; */
+    padding: 0 !important;
+}
+
+.navbar-brand img
+{
+    height: 40px;
+    padding-left: 20px;
+}
+
+.navbar-nav li
+{
+    padding: 0 10px
+}
+
+.dropdown-menu a{
+  color: black;
+}
+
+.navbar-nav li a
+{
+    color: #fff !important;
+    font-weight: 600;
+    float: right;
+    text-align: left;
+}
+
+.fa-bars
+{
+    color: #fff;
+    font-size: 30px !important;
+}
+
+.navbar-toggler
+{
+    outline: none !important;
+}
+
+.dropdown-menu a:hover {
+  background-color: transparent;
+}
